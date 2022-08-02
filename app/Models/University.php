@@ -9,8 +9,13 @@ class University extends Model
 {
     use HasFactory;
     protected $table='universities';
-    public function user(){
-        return $this->belongsTo('Student');
-    }
+    // public function user(){
+    //     return $this->belongsTo('Student');
+    // }
+
+    public function getStudents()
+   {
+      return $this->hasMany(Student::class,'student_id');
+   }
     
 }

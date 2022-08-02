@@ -25,6 +25,7 @@ class StudentController extends Controller
         // dd('hi');
         // $users = DB::select('select * from student');
         // return $student;
+        // dd($students);
         return view('layouts.index', compact('students'));
     }
 

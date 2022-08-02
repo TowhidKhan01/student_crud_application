@@ -28,12 +28,13 @@ Route::get('show/{id}', [StudentController::class, 'show'])->name('show');
 // University Routes
 
 Route::get('/viewUniversity',[UniversityController::class,'viewUniversity'])->name('viewUniversity');
+Route::get('/view_all_students{id}',[UniversityController::class,'view_all_students'])->name('view_all_students');
 Route::get('/addUniversity', [UniversityController::class, 'addUniversity'])->name('addUniversity');
 Route::post('/storeUniversity', [UniversityController::class, 'storeUniversity'])->name('storeUniversity');
 
 
-Route::get('edit/{id}', [UniversityController::class, 'edit'])->name('edit');
-Route::post('update/{id}', [UniversityController::class, 'update'])->name('update');
-Route::get('delete/{id}', [UniversityController::class, 'destroy'])->name('delete');
-Route::get('show/{id}', [UniversityController::class, 'show'])->name('show');
+// Route::get('edit/{id}', [UniversityController::class, 'edit'])->name('edit');
+// Route::post('update/{id}', [UniversityController::class, 'update'])->name('update');
+// Route::get('delete/{id}', [UniversityController::class, 'destroy'])->name('delete');
+// Route::get('show/{id}', [UniversityController::class, 'show'])->name('show');
 // Route::get('show/{id}', [UniversityController::class, 'show'])->name('show');

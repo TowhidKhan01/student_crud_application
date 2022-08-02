@@ -10,6 +10,7 @@ class UniversityController extends Controller
 {
     public function viewUniversity()
     {
+        
         $university = University::all();
         // return $university;
         return view('contents.university.view_university', compact('university'));
@@ -27,9 +28,12 @@ class UniversityController extends Controller
 
         return "succes";
     }
-    public function assignUniversity()
-    {
-        $university = University::all();
-      
+
+    public function view_all_students(){
+        $university = University::with('getStudents')->orderBy('id','desc')->get();
+        // getUniversity->university_name
+        dd($university->getStudents);
+        // return view('contents.student_details',compact('user'));
     }
+    
 }

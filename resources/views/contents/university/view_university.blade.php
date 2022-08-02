@@ -35,8 +35,12 @@
                 <tr>
                     <td>{{$key+1}}</td>
                     <td>{{$university->university_name}}</td>
+                    <td>
 
-                  
+                        <a href="{{route('view_all_students',$university->id)}}" class="btn btn-success" id="details">Show Details</a>
+                    </td>
+
+
                 </tr>
 
                 @endforeach

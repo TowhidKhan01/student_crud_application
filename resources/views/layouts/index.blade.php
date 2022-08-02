@@ -29,7 +29,7 @@
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
                     <th scope="col">Email</th>
-                    <th scope="col">University_id</th>
+                    <th scope="col">University Name</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -40,8 +40,7 @@
                     <td>{{$student->firstname}}</td>
                     <td>{{$student->lastname}}</td>
                     <td>{{$student->email}}</td>
-                    <!-- {{dd($student->universities)}}s -->
-                    <td>{{$student->universities->university_name}}</td>
+                    <td>{{$student->getUniversity->university_name}}</td>
                     <td>
 
                         <a href="{{route('edit',$student->id)}}" class="btn btn-info">Edit</a>
