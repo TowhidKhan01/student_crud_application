@@ -13,9 +13,14 @@ class University extends Model
     //     return $this->belongsTo('Student');
     // }
 
-    public function getStudents()
+   //  public function getStudents()
+   // {
+   //    return $this->hasMany(Student::class,'student_id');
+   // }
+
+   public function students()
    {
-      return $this->hasMany(Student::class,'student_id');
+      return $this->hasMany(Student::class);
    }
     
 }

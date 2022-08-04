@@ -29,11 +29,16 @@ class UniversityController extends Controller
         return "succes";
     }
 
-    public function view_all_students(){
-        $university = University::with('getStudents')->orderBy('id','desc')->get();
-        // getUniversity->university_name
-        dd($university->getStudents);
-        // return view('contents.student_details',compact('user'));
+    // public function view_all_students(){
+    //     // $university = University::with('getStudents')->orderBy('id','desc')->get();
+    //     // // getUniversity->university_name
+    //     // dd($university->getStudents);
+    //     // // return view('contents.student_details',compact('user'));
+    // }
+
+    public function view_all_students($id){
+        $university = University::where('id', $id)->with('students')->first();
+        dd($university->students[0]);
     }
     
 }
